@@ -1,0 +1,640 @@
+/*==========*/
+/*BASE STYLES*/
+/*==========*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(58,121,189);
+    --secondary-color: rgb(26,81,163);
+    --tertiary-color: rgb(174,31,138);
+    --quaternary-color: rgb(234,10,42);
+    --quinary-color: rgb(239,203,42);
+}
+
+
+body {
+  font-family: 'Open sans', cursive, sans-serif;;
+  color: #767676;
+  font-size: 1.75rem;
+ 
+}
+
+
+
+
+
+main .page {
+    font-size: 0.8rem;
+}
+
+
+.item-row {
+    display: flex;
+    
+}
+
+.item-row {
+    justify-content: space-between;
+}
+
+
+.item-row div {
+    
+}
+
+.info {
+    color: #767676;
+}
+
+
+
+.primary-color {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
+.secondary-color {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+.tertiary-color {
+    padding: 10px;
+    background-color: var(--tertiary-color);
+    color: white;
+}
+.quaternary-color {
+    padding: 10px;
+    background-color: var(--quaternary-color);
+    color: white;
+}
+.quinary-color {
+    padding: 10px;
+    background-color: var(--quinary-color);
+    color: white;
+}
+
+
+
+
+
+a { 
+
+ text-decoration: none !important;
+}
+
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+.red {
+    padding: 10px;
+    background-color: rgb(234,10,42);
+    color: white;
+    
+}
+.innercol {
+    width: 100%;
+    text-align:center;
+    margin:auto;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .innercol {
+        font-size: 12px;
+    }
+    
+}
+
+
+.packet-row {
+/*    background-color: #fff;*/
+}
+
+
+
+
+/*.box {
+    height: 250px;
+    padding: 0;
+    background-color: white;
+    position: relative;
+    font-size: 1rem;
+    
+} */
+
+.bottomborder {
+    border-bottom: dotted 1px gray;
+}
+
+
+
+
+
+
+
+.align-text-bottom {
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+   
+    
+}
+
+
+div .col-3 {
+    border-right: 1px dashed grey;
+}
+
+
+.box .align-middle {
+    color: rgb(58,121,189);
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 25%;
+    height: 100%;
+}
+
+
+
+div.align-middle span .num {
+/*    font-size: 2rem !important;*/
+    
+}
+
+.bit {
+    font-size: 1rem;
+}
+
+
+
+
+.center {
+    text-align: center;
+}
+
+
+
+h6 {
+    font-size: 0.8rem;
+    margin-top : 70px;
+}
+
+
+
+
+.questions {
+    margin-top: 20px !important;
+    background-image: url(assets/img/womanheadphones.jpg) !important;
+    background-repeat: no-repeat;
+    background-color: none !important;
+    background-size: cover;
+}
+
+.page-footer p {
+    font-size: 0.9rem
+}
+.map {
+    
+}
+
+
+
+
+/* =========================
+    CARD
+   ========================= */
+
+
+
+
+.card-row {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+/*    bottom: 50%;*/
+    margin: 0 auto;
+ 
+}
+
+.maincontainer{
+  position: relative;
+  /*width: 250px;*/
+  height: 320px;
+  background: none;
+  margin-top: 30px;
+/*  top: 0%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+/*  border-radius: none;*/
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+}
+
+
+
+/*CARD COLORS*/
+
+
+
+.wifi {
+    color: rgb(58,121,189);
+}
+
+.adsl {
+    color: rgb(26,81,163);
+}
+
+
+.vdsl {
+    color: rgb(174,31,138) !important;
+}
+
+
+
+
+
+
+
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+.thecard:hover .thefront{
+  display: none !important;
+}
+
+
+.thecard h2 {
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+/*  border-radius: none;*/
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  z-index: 2;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+/*  border-radius: 10px;*/
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #fff;
+  text-align: center;
+  transform: rotateY(180deg);
+    
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  color: rgb(102,102,102);
+  padding: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.thefront p, .theback p{
+  font-family: 'zilla slab', sans-serif;
+  color: rgb(102,102,102);
+  padding: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+h1.bit {
+/*
+    font-size: 2rem;
+    color: rgb(58,121,189);
+*/
+}
+
+
+div.speed {
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+.num {
+    font-size: 4rem;
+/*    color: rgb(58,121,189);*/
+    font-weight: bold;
+    line-height: .9;
+}
+
+span.bit {
+      font-size: 1.5rem;
+/*     color: rgb(58,121,189);*/
+     
+}
+
+
+
+.adsl .speed{
+/*    color: var(--primary-color);*/
+     color: var(--primary-color) !important;
+    
+} 
+
+
+
+
+
+.speed .wifi > * {
+    color: rgb(58,121,189);
+}
+
+.speed .vdsl > * {
+    color: rgb(174,31,138);
+}
+
+.speed .adsl > * {
+    color: rgb(26,81,163);
+}
+
+
+
+div.col-4.dedicated  {
+   width: initial;
+   height: 100%;
+}
+
+/*div.col-4.dedicated img {
+    width: 100%;
+}*/
+
+
+.nav-pills .nav-item .active {
+  background-color: white;
+    padding: 3px;
+    display: block;
+}
+
+
+
+
+
+
+div.price {
+    font-size: 1rem;
+    position: relative;
+   
+}
+
+.border-dash-top {
+    border-top: 2px dashed #ccc;
+}
+
+.border-dash-left {
+    border-left: 2px dashed #ccc;
+}
+
+div.row .no-gutters {
+    font-size: 0.9rem; 
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   CSS ACCORDION 1
+   ========================= */
+
+
+
+
+
+
+
+
+/* =========================
+   CSS ACCORDION 2
+   ========================= */
+
+
+
+
+body {
+  overflow-y: scroll
+}
+
+.accordion {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  font-size: 0.8rem;
+}
+
+.accordion .item {
+  margin-top: 5px;
+}
+
+.accordion .content {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  box-sizing: content-box;
+  height: 150px;
+}
+
+.accordion .content p {
+  padding: 20px;
+  margin: 0;
+  text-align: left;
+  max-width: initial;
+}
+
+.content.hidden {
+  display: none;
+}
+
+.accordion .trigger {
+  text-decoration: none;
+}
+
+.accordion .title {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  font-size: 1em;
+  background-color: rgb(234, 10, 42);
+  color: #FFFFFF;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.accordion .title:hover {
+  background-color: red;
+}
+
+.accordion .title::after {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  transform: rotate(-135deg);
+  transition: 0.7s;
+  content: "";
+}
+
+.accordion .title.open::after {
+  transform: rotate(-45deg);
+  transition: 0.7s;
+}
+
+
+/* =========================
+   MAP
+   ========================= */
+
+
+
+#googleMap {
+    height: 400px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+
+
+.btn-outline-danger {
+    color: white;
+    border-color: white;
+    padding:  5px 50px;
+}
+
+.btn-outline-danger:hover {
+    background-color: rgb(234,10,42);
+    border-color: white;
+}
+
+
+
+
+.copyright {
+  margin: 0 auto;
+  background-color: rgb(234,10,42) ;
+}
